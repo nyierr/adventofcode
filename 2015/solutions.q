@@ -30,8 +30,7 @@ show "AOC 2015 D02/02: ",.Q.s1 sum .aoc.2015.day02.part2 each read0`$":problems/
 
 .aoc.2015.day03.part2:{[input]
 	m:("^v><"!((0;1);(0;-1);(1;0);(-1;0)));
-	s:(+\) enlist[(0;0)],input where count[input:m input]#10b;
-	:count distinct s,(+\) enlist[(0;0)],input where count[input]#01b;
+	:count distinct raze (+\) each enlist[(0;0)],/:input@/:where each count[input:m input]#'(10b;01b);
 	};
 
 show "AOC 2015 D03/01: ",.Q.s1 .aoc.2015.day03.part1 raze read0`$":problems/03/input.txt";
