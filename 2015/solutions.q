@@ -63,3 +63,15 @@ show "AOC 2015 D05/02: ",.Q.s1 sum .aoc.2015.day05.part2 each read0`$":problems/
 
 show "AOC 2015 D06/01: ",.Q.s1 .aoc.2015.day06.part1 read0`$":problems/06/input.txt";
 show "AOC 2015 D06/02: ",.Q.s1 .aoc.2015.day06.part2 read0`$":problems/06/input.txt";
+
+// Day 08
+.aoc.2015.day08.part1:{[x]
+	:neg count[ssr/[x;("\\x[a-f0-9][a-f0-9]";"\\\\";"\\\"");" "]]-2+count x;
+	};
+
+.aoc.2015.day08.part2:{[x]
+	:count[except[.Q.s x;"\r\n"]] - count x;
+	};
+
+show "AOC 2015 D08/01: ",.Q.s1 sum .aoc.2015.day08.part1 each read0`$":problems/08/input.txt";
+show "AOC 2015 D08/02: ",.Q.s1 sum .aoc.2015.day08.part2 each read0`$":problems/08/input.txt";
