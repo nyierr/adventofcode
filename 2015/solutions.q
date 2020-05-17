@@ -36,6 +36,17 @@ show "AOC 2015 D02/02: ",.Q.s1 sum .aoc.2015.day02.part2 each read0`$":problems/
 show "AOC 2015 D03/01: ",.Q.s1 .aoc.2015.day03.part1 raze read0`$":problems/03/input.txt";
 show "AOC 2015 D03/02: ",.Q.s1 .aoc.2015.day03.part2 raze read0`$":problems/03/input.txt";
 
+// Day 04
+.aoc.2015.day04.part1:{[x]
+	:(1+)/[{m:3#"j"$md5 x,string y; not all(0 0~2#m;16>m 2)}[x]@;0];
+	};
+
+.aoc.2015.day04.part2:{[x]
+	:(1+)/[{not 0x000000~3#md5 x,string y}[x]@;0];
+	};
+show "AOC 2015 D04/01: ",.Q.s1 .aoc.2015.day04.part1 raze read0`$":problems/04/input.txt";
+show "AOC 2015 D04/02: ",.Q.s1 .aoc.2015.day04.part2 raze read0`$":problems/04/input.txt";
+
 // Day 05
 .aoc.2015.day05.part1:{[x]
 	:all(x~ssr/[x;("ab";"cd";"pq";"xy");" "];any not differ x;2<sum raze x=/:"aeiou");
@@ -66,7 +77,7 @@ show "AOC 2015 D06/02: ",.Q.s1 .aoc.2015.day06.part2 read0`$":problems/06/input.
 
 // Day 08
 .aoc.2015.day08.part1:{[x]
-	:neg count[ssr/[x;("\\x[a-f0-9][a-f0-9]";"\\\\";"\\\"");" "]]-2+count x;
+	:count[x]-count[ssr/[x;("\\x[a-f0-9][a-f0-9]";"\\\\";"\\\"");" "]]-2;
 	};
 
 .aoc.2015.day08.part2:{[x]
