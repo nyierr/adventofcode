@@ -16,11 +16,3 @@
 
 show "AOC 2015 D11/01: ",.Q.s1 res:.aoc.2015.day11.part1 first read0`$":input.txt";
 show "AOC 2015 D11/02: ",.Q.s1 .aoc.2015.day11.part2 .aoc.2015.day11.generate res;
-/
-	:.aoc.2015.day11.generate/[{not .aoc.2015.day11.isValid x};.aoc.2015.day11.generate x];
-	};
-	
-q)"hepxcrrq"]
-"hepxxyzz"
-q).aoc.2015.day11.generate/[{not .aoc.2015.day11.isValid x};.aoc.2015.day11.generate "hepxxyzz"]
-"heqaabcc"
