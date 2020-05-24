@@ -1,5 +1,5 @@
 .aoc.2015.day10.helper:{[i;x]
-	:count {raze (string neg -1_last (-\)0^next\[1;i,count x]),'x i:where differ x}/[i;x];
+	:count {raze (string neg -1_(-/)next\[1;i,count x]),'x i:where differ (),x}/[i;x];
 	};
 	
 .aoc.2015.day10.part1:.aoc.2015.day10.helper[40];
