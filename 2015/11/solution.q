@@ -3,9 +3,10 @@
 	};
 
 .aoc.2015.day11.isValid:{[x]
+	if[any(8<>count x;not all within["j"$"x";(97;122)]);:0b];
 	if[any "iol" in x;:0b];
 	if[count[distinct x (-1 0)+/:where 0=deltas "j"$x]<2;:0b];
-	:any all each 1=1_/:deltas each 3#'next\[5;"j"$x];
+	:1=sum all each 1=1_/:deltas each 3#'next\[5;"j"$x];
 	};
 	
 .aoc.2015.day11.part1:{[x]
