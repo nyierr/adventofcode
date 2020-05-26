@@ -4,8 +4,8 @@
 
 .aoc.2015.day11.isValid:{[x]
 	if[any "iol" in x;:0b];
-	if[not 1 in deltas where 1=deltas "j"$x;:0b];
-	:1<sum 1 in/:1_/:deltas each where each .Q.a=\:x;
+	if[count[distinct x (-1 0)+/:where 0=deltas "j"$x]<2;:0b];
+	:any all each 1=1_/:deltas each 3#'next\[5;"j"$x];
 	};
 	
 .aoc.2015.day11.part1:{[x]
