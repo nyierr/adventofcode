@@ -3,13 +3,8 @@
 	};
 
 .aoc.2015.day12.part2:{[x]
-	t:type x;
-	if[9h~abs t; :x];
-	if[0h~t; :raze .z.s each x];
-	if[98h~t;
-		x:raze x;
-		t:type x;
-		];
+	if[9h~abs t:type x; :x];
+	if[any(0h~t;98h~t); :raze .z.s each x];
 	if[99h~t;
 		if[any "red"~/:value x; :0];
 		:raze .z.s each value x;
